@@ -8,7 +8,7 @@ class Photographer {
     this._tagline = data.tagline
     this._price = data.price
     this._portrait = data.portrait
-    this.url = `http://photographer.html/?id=${data.id}`
+    this._url = `http://127.0.0.1:5500/photographer.html?id=${data.id}`;
   }
   
   get name() {
