@@ -11,30 +11,35 @@ class Photographer {
     this._url = `http://127.0.0.1:5500/photographer.html?id=${data.id}`;
   }
   
-  get name() {
+  getName() {
     return this._name
   }
 
-  get id() {
+  getId() {
     return this._id
   }
-  get city() {
+
+  getCity() {
     return this._city
   }
-  get country() {
+
+  getCountry() {
     return this._country
   }
-  get tagline() {
+
+  getTagline() {
     return this._tagline
   }
-  get price() {
+
+  getPrice() {
     return this._price
   }
-  get portrait() {
+
+  getPortrait() {
     return this._portrait
   }
-
-  get url () {
+  
+  getUrl () {
     return this._url
   }
 

@@ -10,7 +10,7 @@ class PhotographerTemplate {
     const img = document.createElement("img");
     img.setAttribute(
     "src",
-    `assets/photographers/${this._photographer.portrait}`
+    `assets/photographers/${this._photographer.getPortrait()}`
     );
     
     const h2 = document.createElement("h2");
@@ -18,12 +18,12 @@ class PhotographerTemplate {
     const pForTagLine = document.createElement("p");
     const pForPrice = document.createElement("p");
     const link = document.createElement("a");
-    link.setAttribute("href", this._photographer.url);
+    link.setAttribute("href", this._photographer.getUrl());
 
-    h2.textContent = this._photographer.name;
-    pForLocation.textContent = `${this._photographer.city}, ${this._photographer.country}`;
-    pForTagLine.textContent = this._photographer.tagline;
-    pForPrice.textContent = `${this._photographer.price}€/Jour`;
+    h2.textContent = this._photographer.getName();
+    pForLocation.textContent = `${this._photographer.getCity()}, ${this._photographer.getCountry()}`;
+    pForTagLine.textContent = this._photographer.getTagline();
+    pForPrice.textContent = `${this._photographer.getPrice()}€/Jour`;
     link.textContent = "ici";
 
     article.appendChild(img);
@@ -42,9 +42,9 @@ class PhotographerTemplate {
   const pForLocation = document.createElement('p');
   const pForTagLine = document.createElement('p');
 
-  h2.textContent = this._photographer.name;
-  pForLocation.textContent = `${this._photographer.city}, ${this._photographer.country}`;
-  pForTagLine.textContent = this._photographer.tagline;
+  h2.textContent = this._photographer.getName();
+  pForLocation.textContent = `${this._photographer.getCity()}, ${this._photographer.getCountry()}`;
+  pForTagLine.textContent = this._photographer.getTagline();
 
   infos.appendChild(h2);
   infos.appendChild(pForLocation);
@@ -54,11 +54,11 @@ class PhotographerTemplate {
   const img = document.createElement("img");
   img.setAttribute(
     "src",
-    `assets/photographers/${this._photographer.portrait}`
+    `assets/photographers/${this._photographer.getPortrait()}`
   );
 
   portrait.appendChild(img)
 
   }
-  
+
 }
