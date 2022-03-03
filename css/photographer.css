@@ -3,6 +3,9 @@
 }
 
 .photograph-header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
@@ -20,6 +23,20 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* .photograph-header-portrait{
+    width: 300px;
+    height: 300px;
+} */
+
+.photograph-header-portrait img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25rem;
+}
+
 
 .modal {
     border-radius: 5px;

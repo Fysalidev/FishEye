@@ -5,14 +5,14 @@ class AppIndex{
 
     }
 
-    async displayPhotographers(){
+    async displayPhotographersCards(){
         
         const photographersData = await this.photographersApi.getPhotographers()
         
         photographersData
-        .map(photographer => new Photographer(photographer))
+        .map((photographer) => new Photographer(photographer))
         .forEach((photographer) => {
-            const Template = new PhotographerCard(photographer);
+            const Template = new PhotographerTemplate(photographer);
             this.$cardsWrapper.appendChild(
                 Template.createPhotographerCard()
             )
@@ -22,7 +22,7 @@ class AppIndex{
 
 async function init() {
     const index = new AppIndex()
-    index.displayPhotographers()
+    index.displayPhotographersCards()
 
 }
 

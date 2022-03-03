@@ -13,7 +13,9 @@
     </header>
     <main id="main">
       <div class="photograph-header">
+        <div class="photograph-header-infos"></div>
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <div class="photograph-header-portrait"></div>
       </div>
     </main>
     <div id="contact_modal">
@@ -31,9 +33,19 @@
 				</form>
 			</div>
 		</div>
+    <!-- api -->
+    <script src="scripts/api/api.js"></script>
+
+    <!-- models -->
+    <script src="scripts/models/Photographer.js"></script>
+    <!-- Templates -->
+    <script src="scripts/Templates/photographerTemplate.js"></script>
     <!-- pages -->
     <script src="/scripts/pages/appPhotographer.js"></script>
     <!-- Utils -->
     <script src="/scripts/utils/contactForm.js"></script>
+
+
+
   </body>
 </html>
