@@ -1,6 +1,6 @@
 class PhotographerTemplate {
-  constructor(photographer) {
-    this._photographer = photographer;
+  constructor(Photographer) {
+    this._photographer = Photographer;
   }
 
   createPhotographerCard() {
