@@ -10,7 +10,7 @@ const init = async() => {
     console.log (photographerId)
 
     // Récupérer un photographe
-    const photographerData = photographers.find(photographer => photographer.id == photographerId);
+    const photographerData = photographers.find(photographer => photographer.id == photographerId)
     console.log(photographerData)
 
     // Afficher les data du photographe récupéré
@@ -23,8 +23,12 @@ const init = async() => {
     console.log(mediaData)
 
     // Afficher les media
+    
     mediaData.forEach(media => {
-        /* Appel à la factory pour construire un Media vidéo ou image */
+        const $mediaWraper = document.querySelector('.photograph-media');
+        const Template = new MediaFactory(media);
+        const add = Template.creatHtml();
+        $mediaWraper.appendChild(add);
     });
 
 }
