@@ -1,62 +1,49 @@
 class Image {
- 
-    constructor(data){
-        
-        this.type = "image";
-        this.medium = data.image;
-        this.id = data.id;
-        this.photographerId = data.id;
-        this.title = data.title;
-        this.likes = data.likes;
-        this.date = data.date;
-        this.price = data.price;
-    }
+  constructor(data) {
+    this.type = "image";
+    this.medium = data.image;
+    this.id = data.id;
+    this.photographerId = data.id;
+    this.title = data.title;
+    this.likes = data.likes;
+    this.date = data.date;
+    this.price = data.price;
+  }
 
-    creatHtml(){
-        
-        const card = document.createElement('article')
-        
-        const mediumContainer = document.createElement('div')
-        mediumContainer.classList.add('medium-container')
-        
-        const infosContainer = document.createElement('div')
-        infosContainer.classList.add('infos-container')
+  creatHtml() {
+    const card = document.createElement("article")
 
-        card.classList.add('photograph-medium')
-        card.appendChild(mediumContainer)
-        card.appendChild(infosContainer)
+    const mediumContainer = document.createElement("div")
+    mediumContainer.classList.add("medium-container")
 
-        const elementMedium = document.createElement('img')
-        elementMedium.setAttribute(
-          "src",
-          `assets/media/${this.medium}`
-        );
+    const infosContainer = document.createElement("div")
+    infosContainer.classList.add("infos-container")
 
-        mediumContainer.appendChild(elementMedium)
+    card.classList.add("photograph-medium")
+    card.appendChild(mediumContainer)
+    card.appendChild(infosContainer)
+    
+    // Media
+    const elementMedium = document.createElement("img");
+    elementMedium.setAttribute("src", `assets/media/${this.medium}`)
+    mediumContainer.appendChild(elementMedium)
 
-        return card
+    //Titre
+    const titleCard = document.createElement ('h3')
+    titleCard.textContent = this.title
+    infosContainer.appendChild(titleCard)
 
-/*         cardMedium
-        .classList.add('medium')
-        
-        cardInfos
-        .classList.add('media-infos')
+    //Likes
+    const elementLikes = document.createElement('div')
+    elementLikes.classList.add('likes')
+    const elementLikesCount = document.createElement('span')
+    elementLikesCount.textContent = this.likes
+    const elementLikesBtn = document.createElement('i')
+    elementLikesBtn.classList.add('fa-solid', 'fa-heart')
+    elementLikes.appendChild(elementLikesCount)
+    elementLikes.appendChild(elementLikesBtn)
+    infosContainer.appendChild(elementLikes)
 
-        const elementForType = document.createElement('p')
-        const elementForTitle = document.createElement('p')
-        const elementForLikes = document.createElement('span')
-        const elementHeartBtn = document.createElement('i')
-
-        elementForType.textContent = this.type;
-        elementForTitle.textContent = this.title;
-        elementForLikes.textContent = this.likes;
-       
-
-
-
-        card
-        .appendChild(elementForType)
-        .appendChild(elementForTitle) */
-        
-    }
+    return card;
+  }
 }

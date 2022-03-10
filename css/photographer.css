@@ -1,3 +1,8 @@
+body{
+    max-width: 1440px;
+    margin: auto;
+}
+
 #contact_modal {
     display: none;
 }
@@ -37,7 +42,46 @@
     border-radius: 25rem;
 }
 
+.photograph-media{
+    display:flex;
+    flex-wrap: wrap;
+}
+.photograph-medium{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+.medium-container img{
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
 
+.medium-container video {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.infos-container{
+    display:flex;
+    justify-content: space-between;
+}
+
+.infos-container h3 {
+    margin:0;
+}
+
+i {
+    color:red;
+    font-style: normal;
+    font-family: FontAwesome;
+    
+}
+
+/* Modal */
 .modal {
     border-radius: 5px;
     background-color: #DB8876;

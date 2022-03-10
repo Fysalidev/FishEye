@@ -23,10 +23,26 @@ class Video {
     card.appendChild(mediumContainer);
     card.appendChild(infosContainer);
 
+    // Media
     const elementMedium = document.createElement("video");
     elementMedium.setAttribute("src", `assets/media/${this.medium}`);
-
     mediumContainer.appendChild(elementMedium);
+
+    //Titre
+    const titleCard = document.createElement("h3");
+    titleCard.textContent = this.title;
+    infosContainer.appendChild(titleCard);
+
+    //Likes
+    const elementLikes = document.createElement("div");
+    elementLikes.classList.add("likes");
+    const elementLikesCount = document.createElement("span");
+    elementLikesCount.textContent = this.likes;
+    const elementLikesBtn = document.createElement("i");
+    elementLikesBtn.classList.add("fa-solid", "fa-heart");
+    elementLikes.appendChild(elementLikesCount);
+    elementLikes.appendChild(elementLikesBtn);
+    infosContainer.appendChild(elementLikes);
 
     return card;
   }
