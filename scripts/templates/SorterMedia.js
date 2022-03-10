@@ -7,17 +7,41 @@ class SorterMedia {
     this.$mediaWrapper = document.querySelector(".photograph-media");
   }
 
-  async sorterMedia(sorter){
+  async displayMedia(){
+    this.media.forEach((media) => {
+      const medium = new MediaFactory(media);
+      this.$mediaWrapper.appendChild(medium.creatHtml());
+    });
+  }
+
+  async sorterMedia(orderBy){
     this.clearMediaWrapper()
 
-    console.log(sorter)
+    switch (orderBy) {
+      case 'likes':
+        this.media.sort((a, b) => (a.likes > b.likes ? 1 : -1)).reverse()
+        break;
+
+      case 'date':
+        this.media.sort((a, b) => (a.date > b.date ? 1 : -1)).reverse();
+        break;
+
+      case 'title':
+        this.media.sort((a, b) => (a.title > b.title ? 1 : -1))
+        break;
+
+      default:
+        console.log('OrderBy non valide')
+    }
+
+    this.displayMedia()
 
   }
 
   onChangeSorter() {
     this.$wrapper.querySelector("form").addEventListener("change", (e) => {
-      const sorter = e.target.value;
-      this.sorterMedia(sorter);
+      const orderBy = e.target.value;
+      this.sorterMedia(orderBy);
     });
   }
 
@@ -40,5 +64,7 @@ class SorterMedia {
     this.$wrapper.innerHTML = sorterForm;
     this.onChangeSorter()
     this.$sorterFormWrapper.appendChild(this.$wrapper);
+    
+    this.displayMedia()
   }
 }
