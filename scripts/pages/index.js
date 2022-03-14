@@ -5,7 +5,7 @@ const init = async() => {
 
     photographers.forEach((photographer) => {
       const Template = new Photographer(photographer);
-      wrapper.appendChild(Template.createPhotographerCard());
+      wrapper.appendChild(Template.buildPhotographerCard());
     });
 }
 

@@ -5,12 +5,17 @@ class SorterMedia {
     this.$wrapper = document.createElement("div");
     this.$sorterFormWrapper = document.querySelector(".sorter-form-wrapper");
     this.$mediaWrapper = document.querySelector(".photograph-media");
+    this.$sliderWrapper = document.querySelector(".slider-media")
   }
 
   async displayMedia(){
+    console.log(this.$sliderWrapper)
+    this.$sliderWrapper.innerHTML = "";
+
     this.media.forEach((media) => {
       const medium = new MediaFactory(media);
-      this.$mediaWrapper.appendChild(medium.creatHtml());
+      this.$mediaWrapper.appendChild(medium.creatHtml())
+      this.$sliderWrapper.appendChild(medium.sliderRender())
     });
   }
 
@@ -66,5 +71,6 @@ class SorterMedia {
     this.$sorterFormWrapper.appendChild(this.$wrapper);
     
     this.displayMedia()
+    
   }
 }

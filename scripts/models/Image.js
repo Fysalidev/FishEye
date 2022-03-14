@@ -46,4 +46,18 @@ class Image {
 
     return card;
   }
+
+  sliderRender(){
+    
+    const slide = document.createElement('div')
+    slide.classList.add('slide')
+    
+    const html = `
+      <img class="slide-medium" src="assets/media/${this.medium}">
+      <p class="title">${this.title}</p>
+    `;
+    slide.innerHTML = html
+
+    return slide
+  }
 }

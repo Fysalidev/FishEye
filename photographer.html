@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
   <head>
     <!-- Fontawesome -->
@@ -10,33 +10,43 @@
     <title>Fisheye - photographe </title>
   </head>
   <body>
-    <header>
-      <img src="assets/images/logo.png" class="logo" />
-    </header>
-    <main id="main">
-      <div class="photograph-header">
-        <div class="photograph-header-infos"></div>
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-        <div class="photograph-header-portrait"></div>
+    <div class="bloc-page">
+      <header>
+        <img src="assets/images/logo.png" class="logo" />
+      </header>
+      <main id="main">
+        <div class="photograph-header">
+          <div class="photograph-header-infos"></div>
+          <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+          <div class="photograph-header-portrait"></div>
+        </div>
+        <div class="sorter-form-wrapper"></div>
+        <div class="photograph-media"></div>
+        <div class="slider"></div>
+      </main>
+      <div id="contact_modal">
+        <div class="modal">
+          <header>
+            <h2>Contactez-moi</h2>
+            <img src="assets/icons/close.svg" onclick="closeModal()" />
+          </header>
+          <form>
+            <div>
+              <label>Prénom</label>
+              <input />
+            </div>
+            <button class="contact_button">Envoyer</button>
+          </form>
+        </div>
       </div>
-      <div class="sorter-form-wrapper"></div>
-      <div class="photograph-media"></div>
-    </main>
-    <div id="contact_modal">
-			<div class="modal">
-				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
-        </header>
-				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div>
+      <div class="slider">
+        <button class="next-slide" onclick="plusDivs(-1)">&#10094;</button>
+        <div class="slider-media">
+        <!-- Ajouter ici les slides -->
+        </div>
+        <button class="next-slide" onclick="plusDivs(+1)">&#10095;</button>
+      </div>
+    </div>
 
     <!-- api -->
     <script src="scripts/api/api.js"></script>
@@ -52,6 +62,8 @@
     <script src="scripts/templates/SorterMedia.js"></script>
     <!-- pages -->
     <script src="/scripts/pages/photographer.js"></script>
+    <!-- utils -->
+    <script src="scripts/utils/slider.js"></script>
 
 
 
