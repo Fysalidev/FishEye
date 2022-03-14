@@ -10,21 +10,26 @@ class Photographer {
   }
 
   buildPhotographerCard() {
+    
+    const wrapper = document.querySelector(".photographer_section");
     const article = document.createElement("article");
 
     const html = `
       <a href="photographer.html?id=${this.id}">
-      <img src="assets/photographers/${this.portrait}" alt="#">
+      <div class="photographer-link" alt="${this.name}">
+        <img src="assets/photographers/${this.portrait}" alt="#">
+        <h2>${this.name}</h2>
+      </div>
       </a>
-      <h2>Mimi Keel</h2>
-      <p>${this.city}, ${this.country}</p>
-      <p>${this.tagline}</p>
-      <p>${this.price}€/Jour</p>
-    `
-
+      <p>
+        <span class="location">${this.city}, ${this.country}</span><br>
+        <span class="tagLine">${this.tagline}</span><br>
+        <span>${this.price}€/Jour</span><br>
+      </p>
+    `;
     article.innerHTML = html;
+    wrapper.appendChild(article)
 
-    return article;
   }
 
   createPhotographerHeader() {
