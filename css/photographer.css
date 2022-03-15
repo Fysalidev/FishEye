@@ -170,9 +170,6 @@ i {
 /* Modal */
 
 .modal {
-    position:absolute;
-    width: 669px;
-    top:0px;
     border-radius: 5px;
     background-color: #DB8876;
     width: 50%;
@@ -182,7 +179,6 @@ i {
     justify-content: space-between;
     padding: 35px;
     margin: auto;
-    z-index: 1;
 }
 
 .modal header {
