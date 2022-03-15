@@ -23,8 +23,8 @@ class Photographer {
       </a>
       <p>
         <span class="location">${this.city}, ${this.country}</span><br>
-        <span class="tagLine">${this.tagline}</span><br>
-        <span>${this.price}€/Jour</span><br>
+        <span class="tagline">${this.tagline}</span><br>
+        <span class="price">${this.price}€/Jour</span><br>
       </p>
     `;
     article.innerHTML = html;
@@ -32,12 +32,15 @@ class Photographer {
 
   }
 
-  createPhotographerHeader() {
+  buildPhotographerHeader() {
     const infos = document.querySelector(".photograph-header-infos");
 
     const h2 = document.createElement("h2");
     const pForLocation = document.createElement("p");
     const pForTagLine = document.createElement("p");
+
+    pForLocation.classList.add('location')
+    pForTagLine.classList.add('tagline')
 
     h2.textContent = this.name;
     pForLocation.textContent = `${this.city}, ${this.country}`;

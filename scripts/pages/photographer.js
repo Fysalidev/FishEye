@@ -8,7 +8,7 @@ const init = async() => {
 
     // Display
     const Template = new Photographer (photographerData)
-    Template.createPhotographerHeader()
+    Template.buildPhotographerHeader()
 
     const Sorter = new SorterMedia(mediaData)
     Sorter.render()

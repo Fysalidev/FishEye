@@ -1,6 +1,7 @@
 .bloc-page{
     max-width: 1440px;
     margin: auto;
+    padding: 0 2rem;
 }
 
 #contact_modal {
@@ -8,13 +9,60 @@
     z-index: 1;
 }
 
+header{
+    margin: 2rem 0;
+}
+
+.logo{
+    height: 50px;
+}
 .photograph-header {
     display:flex;
-    justify-content: space-between;
+    gap:12rem;
     align-items: center;
     background-color: #FAFAFA;
     height: 300px;
-    margin: 0 100px;
+    margin-left: 20px;
+}
+
+.photograph-header-infos h2{
+    color:#D3573C;
+    font-family: "DM Sans", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 83px;
+    margin: 0;
+    text-align: left;
+}
+
+.photograph-header-infos p{
+    margin: 1rem 0;
+}
+
+.photograph-header-infos p.location{
+    color:#901C1C;
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 31px;
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+.photograph-header-infos p.tagline{
+    color: #525252;
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+     margin: 0.5rem 0;
+    text-align: left;
 }
 
 .contact_button {
@@ -30,11 +78,6 @@
     cursor: pointer;
 }
 
-/* .photograph-header-portrait{
-    width: 300px;
-    height: 300px;
-} */
-
 .photograph-header-portrait img{
     width: 250px;
     height: 250px;
@@ -43,14 +86,52 @@
     border-radius: 25rem;
 }
 
+.sorter-form-wrapper {
+    margin-bottom: 3rem;
+}
+
+.sorter-form-wrapper label{
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.sorter-form-wrapper select{
+    color: white;
+    border: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    background: #901C1C;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.1rem;
+    width: 11rem;
+}
+
+.media-sorter{
+    height: 100px;
+}
+
 .photograph-media{
     display:flex;
     flex-wrap: wrap;
+    gap:5rem;
+    
 }
 .photograph-medium{
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    border-radius: 5px;
+    overflow: hidden;
 }
 .medium-container img{
     width: 350px;
@@ -63,12 +144,13 @@
     width: 350px;
     height: 300px;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
 }
 
 .infos-container{
     display:flex;
     justify-content: space-between;
+    padding: 0.5rem 0;
 }
 
 .infos-container h3 {
@@ -83,6 +165,7 @@ i {
 }
 
 /* Modal */
+
 .modal {
     position:absolute;
     top:0px;
