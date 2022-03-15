@@ -1,234 +1,263 @@
-body{
-    position:relative;
-}
-.bloc-page{
-    max-width: 1440px;
-    margin: auto;
-    padding: 0 2rem;
+.bloc-page {
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 2rem;
 }
 
 #contact_modal {
-    display: none;
-    z-index: 1;
+  display: none;
+  z-index: 1;
 }
 
-header{
-    margin: 2rem 0;
+header {
+  margin: 2rem 0;
 }
 
-.logo{
-    height: 50px;
+.logo {
+  height: 50px;
 }
+
 .photograph-header {
-    display:flex;
-    gap:12rem;
-    align-items: center;
-    background-color: #FAFAFA;
-    height: 300px;
-    margin-left: 20px;
+  display: flex;
+  gap: 12rem;
+  align-items: center;
+  background-color: #fafafa;
+  height: 300px;
+  margin-left: 20px;
 }
 
-.photograph-header-infos h1{
-    color:#D3573C;
-    font-family: "DM Sans", sans-serif;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0em;
-    line-height: 83px;
-    margin: 0;
-    text-align: left;
+.photograph-header-infos h1 {
+  color: #d3573c;
+  font-family: "DM Sans", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 83px;
+  margin: 0;
+  text-align: left;
 }
 
-.photograph-header-infos p{
-    margin: 1rem 0;
+.photograph-header-infos p {
+  margin: 1rem 0;
 }
 
-.photograph-header-infos p.location{
-    color:#901C1C;
-    font-family: "DM Sans", sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0em;
-    line-height: 31px;
-    margin: 0.5rem 0;
-    text-align: left;
+.photograph-header-infos p.location {
+  color: #901c1c;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 31px;
+  margin: 0.5rem 0;
+  text-align: left;
 }
 
-.photograph-header-infos p.tagline{
-    color: #525252;
-    font-size: 18px;
-    font-family: "DM Sans", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 23px;
-    letter-spacing: 0em;
-     margin: 0.5rem 0;
-    text-align: left;
+.photograph-header-infos p.tagline {
+  color: #525252;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  margin: 0.5rem 0;
+  text-align: left;
 }
 
 .contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.photograph-header-portrait img{
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 25rem;
+.photograph-header-portrait img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 25rem;
 }
 
 .sorter-form-wrapper {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
-.sorter-form-wrapper label{
-    font-family: "DM Sans", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 23px;
-    letter-spacing: 0em;
-    text-align: left;
+.sorter-form-wrapper label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.sorter-form-wrapper select{
-    color: white;
-    border: none;
-    font-family: "DM Sans", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 23px;
-    letter-spacing: 0em;
-    text-align: left;
-    background: #901C1C;
-    padding: 0.5rem;
-    margin: 0 0.5rem;
-    border-radius: 0.1rem;
-    width: 11rem;
+.sorter-form-wrapper select {
+  color: white;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  background: #901c1c;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.1rem;
+  width: 11rem;
 }
 
-.media-sorter{
-    height: 100px;
+.media-sorter {
+  height: 100px;
 }
 
-.photograph-media{
-    display:flex;
-    flex-wrap: wrap;
-    gap:5rem;
-    
+.photograph-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7rem;
 }
-.photograph-medium{
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    overflow: hidden;
+
+.photograph-medium {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
 }
-.medium-container img{
-    width: 350px;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
+
+.medium-container img {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .medium-container video {
-    width: 350px;
-    height: 300px;
-    object-fit: cover;
-    object-position: top;
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
 }
 
-.infos-container{
-    display:flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
+.infos-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
 }
 
 .infos-container h3 {
-    margin:0;
+  margin: 0;
 }
 
 i {
-    color:red;
-    font-style: normal;
-    font-family: FontAwesome;
-    
+  color: red;
+  font-style: normal;
+  font-family: FontAwesome;
 }
 
 /* Modal */
 
 .modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  background-color: #db8876;
+  padding: 35px;
+  margin: auto;
+  width: 669px;
+  height: 900px;
 }
 
 .modal header {
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+
+.modal header div span.contact {
+  font-family: "DM Sans", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 83px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .modal header img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .modal header h2 {
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 83px;
+  letter-spacing: 0em;
+  margin: 0;
+  text-align: left;
+}
+
+.modal header p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 83px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-form label {
-    color: #312E2E;
-    font-size: 36px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: self-start;
-    margin-bottom: 26px;
+  margin-bottom: 26px;
+}
+
+form label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 47px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 form input {
-    width: 100%;
-    height: 68px;
-    border: none;
-    border-radius: 5px;
+  width: 100%;
+  height: 68px;
+  border: none;
+  border-radius: 5px;
+  width: 599px;
+  height: 68px;
 }
 
 /* ----------- Global CSS | intab.io ------------ */
 div.slider {
-  
   display: flex;
   justify-content: space-around;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 div.slider-media {
@@ -241,7 +270,6 @@ img.slide-medium {
   height: 100%;
   object-fit: cover;
   /* object-position: top; */
-  
 }
 
 div.slide {
@@ -257,8 +285,8 @@ video.slide-medium {
 button.next-slide {
   font-size: 52px;
   border: 2px none #00000000;
-  background: #E8D6D600;
+  background: #e8d6d600;
   opacity: 1;
   font-family: sans-serif;
-  color: #901C1C;
+  color: #901c1c;
 }
