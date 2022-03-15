@@ -1,3 +1,6 @@
+body{
+    position:relative;
+}
 .bloc-page{
     max-width: 1440px;
     margin: auto;
@@ -25,7 +28,7 @@ header{
     margin-left: 20px;
 }
 
-.photograph-header-infos h2{
+.photograph-header-infos h1{
     color:#D3573C;
     font-family: "DM Sans", sans-serif;
     font-size: 64px;
@@ -168,6 +171,7 @@ i {
 
 .modal {
     position:absolute;
+    width: 669px;
     top:0px;
     border-radius: 5px;
     background-color: #DB8876;

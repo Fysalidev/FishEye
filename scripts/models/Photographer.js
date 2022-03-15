@@ -35,7 +35,7 @@ class Photographer {
   buildPhotographerHeader() {
     const infos = document.querySelector(".photograph-header-infos");
 
-    const h2 = document.createElement("h2");
+    const h2 = document.createElement("h1");
     const pForLocation = document.createElement("p");
     const pForTagLine = document.createElement("p");
 
