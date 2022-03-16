@@ -50,12 +50,13 @@ class Image {
   sliderRender(){
     
     const slide = document.createElement('div')
-    slide.classList.add('slide')
+    slide.classList.add('slide', 'slide-hidden')
     
     const html = `
       <img class="slide-medium" src="assets/media/${this.medium}">
       <p class="title">${this.title}</p>
     `;
+
     slide.innerHTML = html
 
     return slide

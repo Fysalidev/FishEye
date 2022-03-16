@@ -253,11 +253,26 @@ form input {
   height: 68px;
 }
 
-/* ----------- Global CSS | intab.io ------------ */
+/* ----------- slider ------------ */
+
+.slider-hidden {
+  display: none;
+}
+
+.slider)reveal {
+  display:block;
+}
+
 div.slider {
-  display: flex;
-  justify-content: space-around;
-  background: #ffffff;
+  /* position:absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+ /*  display: flex; */
+  /* gap:2rem; */
+  /* align-items: center; */
+  /* background: #ffffff; */
 }
 
 div.slider-media {

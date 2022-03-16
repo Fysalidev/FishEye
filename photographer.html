@@ -24,7 +24,6 @@
         </div>
         <div class="sorter-form-wrapper"></div>
         <div class="photograph-media"></div>
-        <div class="slider"></div>
       </main>
       <div id="contact_modal">
         <div class="modal">
@@ -51,11 +50,11 @@
         </div>
       </div>
       <div class="slider">
+        <img src="assets/icons/close.svg" onclick="toggleSlider()" style="background:black" />
         <button class="next-slide" onclick="plusDivs(-1)">&#10094;</button>
         <div class="slider-media">
-        <!-- Ajouter ici les slides -->
         </div>
-        <button class="next-slide" onclick="plusDivs(+1)">&#10095;</button>
+        <button class="next-slide" onclick="nextSlide()">&#10095;</button>
       </div>
     </div>
 

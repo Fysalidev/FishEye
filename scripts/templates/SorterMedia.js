@@ -1,15 +1,13 @@
 class SorterMedia {
   constructor(Media) {
     this.media = Media;
-
-    /* this.$wrapper = document.createElement("div"); */
     this.$sorterFormWrapper = document.querySelector(".sorter-form-wrapper");
     this.$mediaWrapper = document.querySelector(".photograph-media");
     this.$sliderWrapper = document.querySelector(".slider-media");
   }
 
   async displayMedia() {
-    console.log(this.$sliderWrapper);
+    
     this.$sliderWrapper.innerHTML = "";
 
     this.media.forEach((media) => {
@@ -40,6 +38,7 @@ class SorterMedia {
     }
 
     this.displayMedia();
+    displaySlider()
   }
 
   onChangeSorter() {
@@ -65,7 +64,8 @@ class SorterMedia {
       </select>       
     `
     this.$sorterFormWrapper.innerHTML = sorterForm;
-    this.onChangeSorter();
-    this.displayMedia();
+    this.onChangeSorter()
+    this.displayMedia()
+    displaySlider()
   }
 }
