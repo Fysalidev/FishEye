@@ -50,14 +50,16 @@ class Video {
   sliderRender(){
     
     const slide = document.createElement('div')
-    slide.classList.add("slide", "hidden");
+    slide.classList.add('slide', 'hidden');
     
     const html = `
-      <video class="slide-medium" src="assets/media/${this.medium}"></video>
+      <video controls class="slide-medium" src="assets/media/${this.medium}"><p>Votre navigateur ne supporte pas les vidéo HTML5 utilisez ce lien pour visionner la vidéoYour browser doesn't support HTML5 video : 
+      <a href="assets/media/${this.medium}">Vidéo</a> instead.</p></video>
       <p class="title">${this.title}</p>
-    `
+    `;
     slide.innerHTML = html
 
     return slide
   }
 }
+

@@ -265,15 +265,11 @@ form input {
 
 
 div.slider {
-  /* position:absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  /* right: 0; */
-  /* bottom: 0; */
- /*  display: flex; */
-  /* gap:2rem; */
-  /* align-items: center; */
-  /* background: #ffffff; */
+
+  /* display: flex;
+  gap:2rem;
+  align-items: center; */
+
 }
 
 div.slider-media {

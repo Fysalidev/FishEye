@@ -1,12 +1,17 @@
+const main = document.getElementById('main')
 const sliderNode = document.querySelector('.slider')
 const slidesNode = document.querySelector(".slider-media");
 
-const openSlider = () => sliderNode.classList.toggle("hidden")
+const openSlider = () => {
+  main.classList.toggle('hidden')
+  sliderNode.classList.toggle('hidden')
 
-const closeSlider = () => {
+}
   
-  slidesNode.querySelector('.visible').classList.replace('visible', 'hidden')
+const closeSlider = () => {
+  main.classList.toggle("hidden");
   sliderNode.classList.toggle("hidden")
+  slidesNode.querySelector('.visible').classList.replace('visible', 'hidden')
 
 }
 
@@ -17,7 +22,7 @@ const displaySlider = () => {
   sliderMediaNodes.forEach((node) => {
     node.addEventListener("click", (e) => {
       const attribut = e.target.getAttribute('src')    
-      const imageSlider = document.querySelector(".slider-media").querySelector(`img[src="${attribut}"]`);
+      const imageSlider = document.querySelector(".slider-media").querySelector(`[src="${attribut}"]`);
       imageSlider.parentElement.classList.replace("hidden", "visible");
       openSlider()
     });
