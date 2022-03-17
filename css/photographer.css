@@ -255,13 +255,14 @@ form input {
 
 /* ----------- slider ------------ */
 
-.slider-hidden {
+.hidden {
   display: none;
 }
 
-.slider)reveal {
+.visible{
   display:block;
 }
+
 
 div.slider {
   /* position:absolute; */

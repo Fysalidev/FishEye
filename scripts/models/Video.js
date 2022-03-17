@@ -50,10 +50,10 @@ class Video {
   sliderRender(){
     
     const slide = document.createElement('div')
-    slide.classList.add('slide')
+    slide.classList.add("slide", "hidden");
     
     const html = `
-      <img class="slide-medium" src="assets/media/${this.medium}">
+      <video class="slide-medium" src="assets/media/${this.medium}"></video>
       <p class="title">${this.title}</p>
     `
     slide.innerHTML = html

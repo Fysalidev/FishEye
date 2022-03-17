@@ -49,12 +49,12 @@
           </form>
         </div>
       </div>
-      <div class="slider">
-        <img src="assets/icons/close.svg" onclick="toggleSlider()" style="background:black" />
-        <button class="next-slide" onclick="plusDivs(-1)">&#10094;</button>
+      <div class="slider hidden">
+        <img src="assets/icons/close.svg" onclick="closeSlider()" style="background:black" />
+        <button class="next-slide" onclick="nextSlide('left')">&#10094;</button>
         <div class="slider-media">
         </div>
-        <button class="next-slide" onclick="nextSlide()">&#10095;</button>
+        <button class="next-slide" onclick="nextSlide('right')">&#10095;</button>
       </div>
     </div>
 
