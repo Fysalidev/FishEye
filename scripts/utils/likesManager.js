@@ -1,8 +1,6 @@
 function countLikes() {
   const collection = document.querySelectorAll(".likesCount");
   const resultNode = document.querySelector(".heart-count");
-  console.log(resultNode);
-  console.log(collection);
   const likesValues = Array.from(collection).map((item) =>
     parseInt(item.textContent)
   );
@@ -23,11 +21,12 @@ function heartManager(){
   
   heartNode.forEach((element) => {
     element.addEventListener("click", (e) => {
+      e.stopPropagation()
       console.log(e.target);
       const isBtnOnclick = e.target.classList.toggle("onclick");
       console.log(isBtnOnclick);
   
-      let numberOfLikes = parseInt(e.target.previousElementSibling.textContentgit);
+      let numberOfLikes = parseInt(e.target.previousElementSibling.textContent);
       console.log(numberOfLikes);
   
       isBtnOnclick ? numberOfLikes++ : numberOfLikes--;
