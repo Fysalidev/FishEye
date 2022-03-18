@@ -50,11 +50,15 @@
         </div>
       </div>
       <div class="slider hidden">
-        <img src="assets/icons/close.svg" onclick="closeSlider()" style="background:black" />
-        <button class="next-slide" onclick="nextSlide('left')">&#10094;</button>
-        <div class="slider-media">
+        <div class="slider-container">
+          <i class="fa-solid fa-chevron-left slider_btn slider_btn-left" onclick="nextSlide('left')"></i>
+          <div class="slider-media">
+          </div>
+          <div class="slider-controls">
+            <i class="fa-solid fa-chevron-right slider_btn slider_btn-right" onclick="nextSlide('right')"></i>
+            <i class="fa-solid fa-xmark slider_btn slider_btn-close" onclick="closeSlider()"></i>
+          </div>
         </div>
-        <button class="next-slide" onclick="nextSlide('right')">&#10095;</button>
       </div>
     </div>
 
