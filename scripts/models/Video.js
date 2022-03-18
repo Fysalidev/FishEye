@@ -37,9 +37,10 @@ class Video {
     const elementLikes = document.createElement("div");
     elementLikes.classList.add("likes");
     const elementLikesCount = document.createElement("span");
+    elementLikesCount.classList.add("likesCount");
     elementLikesCount.textContent = this.likes;
     const elementLikesBtn = document.createElement("i");
-    elementLikesBtn.classList.add("fa-solid", "fa-heart");
+    elementLikesBtn.classList.add("fa-solid", "fa-heart", "heart-btn");
     elementLikes.appendChild(elementLikesCount);
     elementLikes.appendChild(elementLikesBtn);
     infosContainer.appendChild(elementLikes);

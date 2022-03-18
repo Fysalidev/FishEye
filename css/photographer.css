@@ -24,6 +24,10 @@ header {
   align-items: center;
   background-color: #fafafa;
   height: 300px;
+  /* padding-left: 20px; */
+}
+
+.photograph-header-infos {
   margin-left: 20px;
 }
 
@@ -157,12 +161,28 @@ header {
 }
 
 .infos-container h3 {
+  color: #901c1c;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
   margin: 0;
 }
 
-i {  
+.likes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #901c1c;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
   font-style: normal;
-  font-family: FontAwesome;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: right;
 }
 
 /* Modal */
@@ -258,35 +278,35 @@ form input {
   display: none;
 }
 
-.visible{
-  display:block;
+.visible {
+  display: block;
 }
 
-.slider{
+.slider {
   width: 1253px;
   height: 984px;
 }
 
-.slider-container{
+.slider-container {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.slider-controls{
+.slider-controls {
   display: flex;
   flex-direction: column;
   /* gap:376px; */
 }
 
-.slider_btn{
-  color :#901c1c;
+.slider_btn {
+  color: #901c1c;
   font-size: 48px;
 }
 
-.slider_btn-close{
+.slider_btn-close {
   position: absolute;
-  top:90px;
+  top: 90px;
 }
 
 div.slider-media {
@@ -308,7 +328,7 @@ video.slide-medium {
 }
 
 .slide p {
-  color:#901c1c;
+  color: #901c1c;
   font-family: "DM Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
@@ -318,3 +338,26 @@ video.slide-medium {
   text-align: left;
 }
 
+/* Widget */
+
+.widget {
+  width: 376px;
+  height: 65px;
+  background: #db8876;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: right;
+  display: flex;
+  position:sticky;
+  bottom: 0;
+  float: right;
+  margin-right: 2rem;
+  border-radius: 5px 5px 0 0;
+  padding: 0.5rem;
+}

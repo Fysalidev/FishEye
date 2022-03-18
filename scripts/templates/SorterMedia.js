@@ -14,6 +14,8 @@ class SorterMedia {
       const medium = new MediaFactory(media);
       this.$mediaWrapper.appendChild(medium.creatHtml());
       this.$sliderWrapper.appendChild(medium.sliderRender());
+      
+      heartManager()
     });
   }
 
