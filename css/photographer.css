@@ -361,3 +361,7 @@ video.slide-medium {
   border-radius: 5px 5px 0 0;
   padding: 0.5rem;
 }
+
+.widget.hidden {
+  display:none;
+}

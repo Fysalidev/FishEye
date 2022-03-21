@@ -5,6 +5,7 @@ const slidesNode = document.querySelector(".slider-media");
 const openSlider = () => {
   main.classList.toggle('hidden')
   sliderNode.classList.toggle('hidden')
+  document.querySelector('.widget').classList.toggle('hidden')
 
 }
   
@@ -12,6 +13,7 @@ const closeSlider = () => {
   main.classList.toggle("hidden");
   sliderNode.classList.toggle("hidden")
   slidesNode.querySelector('.visible').classList.replace('visible', 'hidden')
+  document.querySelector(".widget").classList.toggle("hidden");
 
 }
 
