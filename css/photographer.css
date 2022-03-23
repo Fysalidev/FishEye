@@ -318,7 +318,6 @@ img.slide-medium {
   width: 1050px;
   height: 900px;
   object-fit: cover;
-  /* object-position: top; */
 }
 
 video.slide-medium {

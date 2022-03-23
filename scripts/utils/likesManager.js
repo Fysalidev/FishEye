@@ -1,12 +1,12 @@
 function countLikes() {
   const collection = document.querySelectorAll(".likesCount");
   const resultNode = document.querySelector(".heart-count");
+  
   const likesValues = Array.from(collection).map((item) =>
     parseInt(item.textContent)
   );
 
   let sum = 0;
-
   for (let i = 0; i < likesValues.length; i++) {
     sum += likesValues[i];
   }

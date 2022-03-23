@@ -1,30 +1,31 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-  <head>
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/2d00da5fd1.js" crossorigin="anonymous"></script>
-    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <title>Fisheye - photographe </title>
-  </head>
-  <body>
-    <div class="bloc-page">
-      <header>
-        <a href="index.html">
-          <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" />
-        </a>
-      </header>
-      <main id="main">
-        <div class="photograph-header">
-          <div class="photograph-header-infos"></div>
-          <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-          <div class="photograph-header-portrait"></div>
-        </div>
-        <div class="sorter-form-wrapper"></div>
-        <div class="photograph-media"></div>
-      </main>
+
+<head>
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/2d00da5fd1.js" crossorigin="anonymous"></script>
+  <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+  <title>Fisheye - photographe </title>
+</head>
+
+<body>
+  <div class="bloc-page">
+    <header>
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="logo" alt="Logo Fisheye - Home page" />
+      </a>
+    </header>
+    <main id="main" aria-label="main" aria-hidden="false">
+      <div class="photograph-header">
+        <div class="photograph-header-infos"></div>
+        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <div class="photograph-header-portrait"></div>
+      </div>
+      <div class="sorter-form-wrapper"></div>
+      <div class="photograph-media"></div>
       <div class="widget">
         <div class="widget_heart">
           <span class="heart-count">14</span>
@@ -34,62 +35,64 @@
           <span>130€</span><span>/jours</span>
         </div>
       </div>
-      <div id="contact_modal">
-        <div class="modal">
-          <header>
-            <div>
-              <h2>Contactez-moi</h2>
-              <span class="contact">Ellie-Rose Wilkens</span>
-            </div>
-            <img src="assets/icons/close.svg" onclick="closeModal()" />
-          </header>
-          <form>
-            <div>
-              <label>Prénom</label>
-              <input type="text">
-              <label for="">Prénom</label>
-              <input type="text">
-              <label for="">Email</label>
-              <input type="mail">
-              <label for="">Message</label>
-              <input type="textarea">
-            </div>
-            <button class="contact_button">Envoyer</button>
-          </form>
-        </div>
+    </main>
+    <div id="contact_modal" role="dialog" aria-hidden="true">
+      <div class="modal">
+        <header>
+          <div>
+            <h2>Contactez-moi</h2>
+            <span class="contact">Ellie-Rose Wilkens</span>
+          </div>
+          <img src="assets/icons/close.svg" id ="modal-btn-close" onclick="closeModal()" />
+        </header>
+        <form>
+          <div>
+            <label for="lastname">Prénom</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Prénom">
+            <label for="firstname">Prénom</label>
+            <input type="text" name="firstname" id="fistname" placeholder="Nom">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="mail">
+            <label for="message">Message</label>
+            <input type="textarea" name="message" id="message" placeholder="Message">
+          </div>
+          <button class="contact_button">Envoyer</button>
+        </form>
       </div>
-      <div class="slider hidden">
-        <div class="slider-container">
-          <i class="fa-solid fa-chevron-left slider_btn slider_btn-left" onclick="nextSlide('left')"></i>
-          <div class="slider-media">
-          </div>
-          <div class="slider-controls">
-            <i class="fa-solid fa-chevron-right slider_btn slider_btn-right" onclick="nextSlide('right')"></i>
-            <i class="fa-solid fa-xmark slider_btn slider_btn-close" onclick="closeSlider()"></i>
-          </div>
+    </div>
+    <div class="slider hidden">
+      <div class="slider-container">
+        <i class="fa-solid fa-chevron-left slider_btn slider_btn-left" onclick="nextSlide('left')"></i>
+        <div class="slider-media">
+        </div>
+        <div class="slider-controls">
+          <i class="fa-solid fa-chevron-right slider_btn slider_btn-right" onclick="nextSlide('right')"></i>
+          <i class="fa-solid fa-xmark slider_btn slider_btn-close" onclick="closeSlider()"></i>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- api -->
-    <script src="scripts/api/api.js"></script>
-    <!-- Utils -->
-    <script src="/scripts/utils/contactForm.js"></script>
-    <!-- Factories -->
-    <script src="scripts/factories/MediaFactory.js"></script>
-    <!-- models -->
-    <script src="scripts/models/Photographer.js"></script>
-    <script src="scripts/models/Image.js"></script>
-    <script src="scripts/models/Video.js"></script>
-    <!-- template -->
-    <script src="scripts/templates/SorterMedia.js"></script>
-    <!-- pages -->
-    <script src="/scripts/pages/photographer.js"></script>
-    <!-- utils -->
-    <script src="scripts/utils/slider.js"></script>
-    <script src="scripts/utils/likesManager.js"></script>
+  <!-- api -->
+  <script src="scripts/api/api.js"></script>
+  <!-- Utils -->
+  <script src="/scripts/utils/contactForm.js"></script>
+  <!-- Factories -->
+  <script src="scripts/factories/MediaFactory.js"></script>
+  <!-- models -->
+  <script src="scripts/models/Photographer.js"></script>
+  <script src="scripts/models/Image.js"></script>
+  <script src="scripts/models/Video.js"></script>
+  <!-- template -->
+  <script src="scripts/templates/SorterMedia.js"></script>
+  <!-- pages -->
+  <script src="/scripts/pages/photographer.js"></script>
+  <!-- utils -->
+  <script src="scripts/utils/slider.js"></script>
+  <script src="scripts/utils/likesManager.js"></script>
 
 
 
-  </body>
+</body>
+
 </html>

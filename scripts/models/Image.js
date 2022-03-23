@@ -15,10 +15,10 @@ class Image {
 
     const mediumContainer = document.createElement("div")
     mediumContainer.classList.add("medium-container")
-
+    
     const infosContainer = document.createElement("div")
     infosContainer.classList.add("infos-container")
-
+    
     card.classList.add("photograph-medium")
     card.appendChild(mediumContainer)
     card.appendChild(infosContainer)
@@ -26,6 +26,8 @@ class Image {
     // Media
     const elementMedium = document.createElement("img");
     elementMedium.setAttribute("src", `assets/media/${this.medium}`)
+    elementMedium.setAttribute('tabindex','0')
+    elementMedium.setAttribute('aria-label', 'medium')
     mediumContainer.appendChild(elementMedium)
 
     //Titre
