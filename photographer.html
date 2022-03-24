@@ -18,7 +18,7 @@
         <img src="assets/images/logo.png" class="logo" alt="Logo Fisheye - Home page" />
       </a>
     </header>
-    <main id="main" aria-label="main" aria-hidden="false">
+    <main id="main" aria-label="contenus principaux" aria-hidden="false">
       <div class="photograph-header">
         <div class="photograph-header-infos"></div>
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
@@ -62,12 +62,12 @@
     </div>
     <div id="slider" class="slider hidden" aria-label="slider" aria-hidden="true">
       <div class="slider-container">
-        <i class="fa-solid fa-chevron-left slider_btn slider_btn-left"></i>
+        <i class="fa-solid fa-chevron-left slider_btn slider_btn-left" aria-lebellby="slider" tabindex="0"></i>
         <div class="slider-media">
         </div>
         <div class="slider-controls">
-          <i class="fa-solid fa-chevron-right slider_btn slider_btn-right"></i>
-          <i class="fa-solid fa-xmark slider_btn slider_btn-close"></i>
+          <i class="fa-solid fa-chevron-right slider_btn slider_btn-right" aria-lebellby="slider" tabindex="0"></i>
+          <i class="fa-solid fa-xmark slider_btn slider_btn-close" aria-lebellby="slider" tabindex="0"></i>
         </div>
       </div>
     </div>

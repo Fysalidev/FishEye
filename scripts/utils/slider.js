@@ -9,6 +9,7 @@ const rigthBtn = document.querySelector(".slider_btn-right")
 // Open slider on position
 const openSlider = () => {
   main.classList.toggle("hidden");
+  main.setAttribute('aria-hidden','true')
   sliderNode.classList.toggle("hidden");
   sliderNode.setAttribute('aria-hidden', 'false')
   document.querySelector(".widget").classList.toggle("hidden");
@@ -16,11 +17,12 @@ const openSlider = () => {
 
 // Close slider
 const closeSlider = () => {
-  main.classList.toggle("hidden");
-  sliderNode.classList.toggle("hidden");
-  sliderNode.setAttribute("aria-hidden", "true");
-  slidesNode.querySelector(".visible").classList.replace("visible", "hidden");
-  document.querySelector(".widget").classList.toggle("hidden");
+  main.classList.remove('hidden');
+  main.setAttribute('aria-hidden', 'false');
+  sliderNode.classList.toggle('hidden');
+  sliderNode.setAttribute('aria-hidden', 'true');
+  slidesNode.querySelector('.visible').classList.replace('visible', 'hidden')
+  document.querySelector('.widget').classList.toggle('hidden')
 };
 
 
@@ -28,6 +30,7 @@ const closeSlider = () => {
 const selectStartPosition = (node) => {
   console.log("Ouvre le slider");
   const attribut = node.getAttribute("src");
+  console.log(attribut)
   const imageSlider = document
     .querySelector(".slider-media")
     .querySelector(`[src="${attribut}"]`);
@@ -63,13 +66,11 @@ const displaySlider = () => {
       selectStartPosition(event.target);
     });
 
-    node.addEventListener("focus", (event) => {
-      event.target.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-          selectStartPosition(event.target)
-        }
-      });
-    });
+    node.addEventListener('keydown', (event)=>{
+      if((event.target === document.activeElement) && (event.key === 'Enter')){
+        selectStartPosition(event.target)
+      }
+    })
   });
 };
 
@@ -107,31 +108,6 @@ document.addEventListener("keydown", (e) => {
     nextSlide();
   }
 });
-
-
-
-
-
-
-
-
-/* const nextSlideX = (option) => {
-  const oldSlide = document.querySelector(".visible");
-
-  oldSlide.classList.replace("visible", "hidden");
-
-  if (option === "left") {
-    oldSlide.previousElementSibling
-      ? oldSlide.previousElementSibling.classList.replace("hidden", "visible")
-      : slidesNode.lastChild.classList.replace("hidden", "visible");
-  }
-
-  if (option === "right") {
-    oldSlide.nextElementSibling
-      ? oldSlide.nextElementSibling.classList.replace("hidden", "visible")
-      : slidesNode.firstChild.classList.replace("hidden", "visible")
-  }
-}; */
 
 
 

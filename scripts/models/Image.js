@@ -43,6 +43,7 @@ class Image {
     elementLikesCount.textContent = this.likes
     const elementLikesBtn = document.createElement('i')
     elementLikesBtn.classList.add('fa-solid', 'fa-heart', 'heart-btn')
+    elementLikesBtn.setAttribute('tabindex', '0')
     elementLikes.appendChild(elementLikesCount)
     elementLikes.appendChild(elementLikesBtn)
     infosContainer.appendChild(elementLikes)
