@@ -13,28 +13,26 @@
 
 <body>
   <div class="bloc-page">
-    <header>
+    <header aria-label="entête du site">
       <a href="index.html">
         <img src="assets/images/logo.png" class="logo" alt="Logo Fisheye - Home page" />
       </a>
     </header>
-    <main id="main" aria-label="contenus principaux" aria-hidden="false">
-      <div class="photograph-header">
-        <!-- <div class="photograph-header-infos"></div>
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-        <div class="photograph-header-portrait"></div> -->
-      </div>
-      <div class="sorter-form-wrapper"></div>
-      <div class="photograph-media"></div>
-      <div class="widget">
-        <div class="widget_heart">
-          <span class="heart-count">14</span>
-          <i class="fa-solid fa-heart"></i>
+    <main id="main" aria-label="media du photographe" aria-hidden="false">
+      <header class="photograph-header" aria-label="Entête du photographe"></header>
+      <section aria-label="media du photographe">
+        <div class="sorter-form-wrapper" aria-label="media selection"></div>
+        <section class="photograph-media" aria-label="media"></section>
+        <div class="widget">
+          <div class="widget_heart">
+            <span class="heart-count">14</span>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="widget_price">
+            <span>130€</span><span>/jours</span>
+          </div>
         </div>
-        <div class="widget_price">
-          <span>130€</span><span>/jours</span>
-        </div>
-      </div>
+      </section>
     </main>
     <div id="contact_modal" role="dialog" aria-hidden="true">
       <div class="modal">
@@ -72,8 +70,8 @@
       </div>
     </div>
   </div>
-  
-  
+
+
 
 
   <!-- api -->
@@ -95,4 +93,5 @@
   <script src="scripts/utils/likesManager.js"></script>
 
 </body>
+
 </html>
