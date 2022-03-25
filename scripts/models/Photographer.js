@@ -10,7 +10,6 @@ class Photographer {
   }
 
   buildPhotographerCard() {
-    
     const wrapper = document.querySelector(".photographer_section");
     const article = document.createElement("article");
 
@@ -28,11 +27,28 @@ class Photographer {
       </p>
     `;
     article.innerHTML = html;
-    wrapper.appendChild(article)
-
+    wrapper.appendChild(article);
   }
 
   buildPhotographerHeader() {
+    const $pageWrapper = document.querySelector(".photograph-header");
+
+    const html = `
+      <div class="photograph-header-infos">
+        <h1>${this.name}</h1>
+        <p class="location">${this.city}, ${this.country}</p>
+        <p class="tagline">${this.tagline}</p>
+      </div>
+      <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+      <div class="photograph-header-portrait">
+        <img src="assets/photographers/${this.portrait}" alt="${this.name}">
+      </div>
+    `;
+
+    $pageWrapper.innerHTML = html;
+  }
+
+  /* buildPhotographerHeader() {
     const infos = document.querySelector(".photograph-header-infos");
 
     const h2 = document.createElement("h1");
@@ -56,5 +72,5 @@ class Photographer {
     img.setAttribute("src", `assets/photographers/${this.portrait}`);
 
     portrait.appendChild(img);
-  }
+  } */
 }
