@@ -9,5 +9,3 @@ const init = async() => {
 }
 
 init();
-
-    

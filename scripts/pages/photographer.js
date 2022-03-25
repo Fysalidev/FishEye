@@ -15,13 +15,6 @@ const init = async() => {
     // Build and display Media with Sorter
     const Sorter = new SorterMedia(mediaData)
     Sorter.render()
-
-    
-
-    
-
-    // Event
-
 }
 
 init();
