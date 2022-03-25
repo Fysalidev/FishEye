@@ -3,7 +3,7 @@ const sliderNode = document.getElementById('slider')
 const slidesNode = document.querySelector(".slider-media")
 const closeBtn = document.querySelector('.slider_btn-close')
 const leftBtn = document.querySelector(".slider_btn-left")
-const rigthBtn = document.querySelector(".slider_btn-right")
+const rightBtn = document.querySelector(".slider_btn-right")
 
 
 // Open slider on position
@@ -26,11 +26,9 @@ const closeSlider = () => {
 };
 
 
-// Find slider position before opening
+// Select position before opening Slider
 const selectStartPosition = (node) => {
-  console.log("Ouvre le slider");
   const attribut = node.getAttribute("src");
-  console.log(attribut)
   const imageSlider = document
     .querySelector(".slider-media")
     .querySelector(`[src="${attribut}"]`);
@@ -38,7 +36,7 @@ const selectStartPosition = (node) => {
   openSlider();
 };
 
-// Navigate
+// Navigate on Slider
 
 const nextSlide = () => {
   const slide = document.querySelector(".visible");
@@ -56,7 +54,7 @@ const previousSlide = () => {
     : slidesNode.lastChild.classList.replace("hidden", "visible");
 };
 
-// Event - Opening
+// Event - Opening Slider
 
 const displaySlider = () => {
   const sliderMediaNodes = document.querySelectorAll(".medium-container img");
@@ -74,16 +72,19 @@ const displaySlider = () => {
   });
 };
 
-// Event - closing
+// Event - Close Slider
 
 closeBtn.addEventListener('click', closeSlider)
 
-closeBtn.addEventListener('focus', (event) => {
-  event.target.addEventListener('keydown', (event)=> {
-    if (!sliderNode.hasAttribute('hidden' && event.key === 'Enter')){
-      closeSlider()
-    }
-  })
+closeBtn.addEventListener('keydown', (event)=>{
+  if((event.target === document.activeElement) && (event.key === 'Enter')){
+    closeSlider()
+  }
+
+  if ((event.target === document.activeElement) && (event.key === "Tab")){
+    event.preventDefault()
+    leftBtn.focus()
+  }
 })
 
 document.addEventListener('keydown', (e) => {
@@ -92,10 +93,24 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Event - Navigation
+// Event - Navigation Slider
 
 leftBtn.addEventListener('click',previousSlide)
-rigthBtn.addEventListener('click', nextSlide)
+leftBtn.addEventListener('keydown',(e)=>{
+  if((e.target === document.activeElement) && (e.key === 'Enter')){
+    previousSlide()
+  }
+})
+
+
+rightBtn.addEventListener('click', nextSlide)
+rightBtn.addEventListener("keydown", (e) => {
+  if (e.target === document.activeElement && e.key === "Enter") {
+    previousSlide();
+  }
+});
+
+
 
 document.addEventListener('keydown',(e)=>{
   if((sliderNode.ariaHidden === 'false') && (e.key === "ArrowLeft")){

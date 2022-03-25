@@ -1,7 +1,7 @@
 function countLikes() {
   const collection = document.querySelectorAll(".likesCount");
   const resultNode = document.querySelector(".heart-count");
-  
+
   const likesValues = Array.from(collection).map((item) =>
     parseInt(item.textContent)
   );
@@ -14,29 +14,37 @@ function countLikes() {
   resultNode.textContent = sum;
 }
 
-function heartManager(){
-
+function heartManager() {
   const heartNode = document.querySelectorAll(".heart-btn");
   console.log(heartNode);
-  
+
   heartNode.forEach((element) => {
     element.addEventListener("click", (e) => {
-      e.stopPropagation()
-      console.log(e.target);
       const isBtnOnclick = e.target.classList.toggle("onclick");
-      console.log(isBtnOnclick);
-  
+
       let numberOfLikes = parseInt(e.target.previousElementSibling.textContent);
       console.log(numberOfLikes);
-  
+
       isBtnOnclick ? numberOfLikes++ : numberOfLikes--;
-  
-      console.log(numberOfLikes);
-  
       e.target.previousElementSibling.textContent = numberOfLikes;
-  
+
       countLikes();
     });
-  });
-}
 
+    element.addEventListener("keydown", (e)=>{
+      if((e.target === document.activeElement) && (e.key === 'Enter')){
+        const isBtnOnclick = e.target.classList.toggle("onclick");
+
+        let numberOfLikes = parseInt(
+          e.target.previousElementSibling.textContent
+        );
+        console.log(numberOfLikes);
+
+        isBtnOnclick ? numberOfLikes++ : numberOfLikes--;
+        e.target.previousElementSibling.textContent = numberOfLikes;
+
+        countLikes();
+      }
+    })
+  });  
+}

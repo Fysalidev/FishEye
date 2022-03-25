@@ -7,9 +7,12 @@ const init = async() => {
     const mediaData = media.filter(media => media.photographerId == photographerId)
 
     // Display
+
+    // Build and display photographer header
     const Template = new Photographer (photographerData)
     Template.buildPhotographerHeader()
 
+    // Build and display Media with Sorter
     const Sorter = new SorterMedia(mediaData)
     Sorter.render()
 
