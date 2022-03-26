@@ -10,6 +10,7 @@ class Photographer {
   }
 
   buildPhotographerCard() {
+
     const wrapper = document.querySelector(".photographer_section");
     const article = document.createElement("article");
 
@@ -25,52 +26,37 @@ class Photographer {
         <span class="tagline">${this.tagline}</span><br>
         <span class="price">${this.price}€/Jour</span><br>
       </p>
-    `;
+    `
+
     article.innerHTML = html;
     wrapper.appendChild(article);
   }
 
   buildPhotographerHeader() {
-    const $pageWrapper = document.querySelector(".photograph-header");
 
+    const $pageWrapper = document.querySelector(".photograph-header");
+ 
     const html = `
-      <div class="photograph-header-infos">
-        <h1>${this.name}</h1>
-        <p class="location">${this.city}, ${this.country}</p>
-        <p class="tagline">${this.tagline}</p>
-      </div>
-      <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-      <div class="photograph-header-portrait">
-        <img src="assets/photographers/${this.portrait}" alt="${this.name}">
-      </div>
+      <article>
+        <div class="photograph-header-infos">
+          <h1>${this.name}</h1>
+          <p class="location">${this.city}, ${this.country}</p>
+          <p class="tagline">${this.tagline}</p>
+        </div>
+        <button class="contact_button">Contactez-moi</button>
+        <div class="photograph-header-portrait">
+          <img src="assets/photographers/${this.portrait}" alt="${this.name}">
+        </div>
+      </article>
     `;
 
-    $pageWrapper.innerHTML = html;
+    $pageWrapper.innerHTML = html
+
   }
 
-  /* buildPhotographerHeader() {
-    const infos = document.querySelector(".photograph-header-infos");
+  buildPhotographerContactForm(){
 
-    const h2 = document.createElement("h1");
-    const pForLocation = document.createElement("p");
-    const pForTagLine = document.createElement("p");
+    const $pageWrapper = document.getElementById('contact_modal')
+  }
 
-    pForLocation.classList.add('location')
-    pForTagLine.classList.add('tagline')
-
-    h2.textContent = this.name;
-    pForLocation.textContent = `${this.city}, ${this.country}`;
-    pForTagLine.textContent = this.tagline;
-
-    infos.appendChild(h2);
-    infos.appendChild(pForLocation);
-    infos.appendChild(pForTagLine);
-
-    const portrait = document.querySelector(".photograph-header-portrait");
-    const img = document.createElement("img");
-
-    img.setAttribute("src", `assets/photographers/${this.portrait}`);
-
-    portrait.appendChild(img);
-  } */
 }

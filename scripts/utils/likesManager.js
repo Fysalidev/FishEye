@@ -16,7 +16,6 @@ function countLikes() {
 
 function heartManager() {
   const heartNode = document.querySelectorAll(".heart-btn");
-  console.log(heartNode);
 
   heartNode.forEach((element) => {
     element.addEventListener("click", (e) => {

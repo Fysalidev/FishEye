@@ -19,11 +19,11 @@
       </a>
     </header>
     <main id="main" aria-label="media du photographe" aria-hidden="false">
-      <header class="photograph-header" aria-label="Entête du photographe"></header>
+      <header id="modal-btn-open" class="photograph-header" aria-label="Entête du photographe"></header>
       <section aria-label="media du photographe">
         <div class="sorter-form-wrapper" aria-label="media selection"></div>
-        <section class="photograph-media" aria-label="media"></section>
-        <div class="widget">
+        <div class="photograph-media" aria-label="media"></div>
+        <div class="widget" aria-label="media-widget">
           <div class="widget_heart">
             <span class="heart-count">14</span>
             <i class="fa-solid fa-heart"></i>
@@ -36,25 +36,27 @@
     </main>
     <div id="contact_modal" role="dialog" aria-hidden="true">
       <div class="modal">
-        <header>
-          <div>
-            <h2>Contactez-moi</h2>
-            <span class="contact">Ellie-Rose Wilkens</span>
+        <header class="modal-header">
+          <div class="modal-header-infos">
+            <h2 class="modal-header-title">Contactez-moi</h2>
+            <span class="modal-header-photographer-name">Ellie-Rose Wilkens</span>
           </div>
-          <img src="assets/icons/close.svg" id="modal-btn-close" onclick="closeModal()" />
+          <div class="modal-header-closebtn">
+            <img src="assets/icons/close.svg" id="modal-btn-close">
+          </div>
         </header>
-        <form>
-          <div>
-            <label for="lastname">Prénom</label>
-            <input type="text" name="lastname" id="lastname" placeholder="Prénom">
-            <label for="firstname">Prénom</label>
-            <input type="text" name="firstname" id="fistname" placeholder="Nom">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="mail">
-            <label for="message">Message</label>
-            <input type="textarea" name="message" id="message" placeholder="Message">
+        <form id="form_contact" aria-label="message">
+          <div class="form_contact_inputs">
+            <label for="form_contact_firstname">Prénom</label>
+            <input type="text" name="form_contact_firstname" id="form_contact_firstname" placeholder="Prénom">
+            <label for="form_contact_lastname">Prénom</label>
+            <input type="text" name="form_contact_lastname" id="form_contact_lastname" placeholder="Nom">
+            <label for="form_contact_email">Email</label>
+            <input type="email" name="form_contact_email" id="form_contact_email" placeholder="mail">
+            <label for="form_contact_message">Message</label>
+            <input type="textarea" name="form_contact_message" id="form_contact_message">
           </div>
-          <button class="contact_button">Envoyer</button>
+          <button id="form_contact_btn-submit" class="contact_button">Envoyer</button>
         </form>
       </div>
     </div>
@@ -70,9 +72,6 @@
       </div>
     </div>
   </div>
-
-
-
 
   <!-- api -->
   <script src="scripts/api/api.js"></script>

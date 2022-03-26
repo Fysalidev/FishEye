@@ -18,17 +18,16 @@ header {
   height: 50px;
 }
 
-.photograph-header {
+.photograph-header article {
   display: flex;
-  gap: 12rem;
+  justify-content: space-around;
   align-items: center;
   background-color: #fafafa;
   height: 300px;
-  /* padding-left: 20px; */
 }
 
 .photograph-header-infos {
-  margin-left: 20px;
+ padding: 1rem;
 }
 
 .photograph-header-infos h1 {
@@ -185,7 +184,7 @@ header {
   text-align: right;
 }
 
-/* Modal */
+/* Contact_Modal */
 
 .modal {
   position: absolute;
@@ -198,16 +197,27 @@ header {
   margin: auto;
   width: 669px;
   height: 900px;
+  box-sizing: border-box;
 }
 
-.modal header {
+.modal-header {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin:0 0 1rem 0;
+}
+
+.modal-header-infos h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 83px;
+  letter-spacing: 0em;
   margin: 0;
 }
 
-.modal header div span.contact {
+.modal-header-infos span {
   font-family: "DM Sans", sans-serif;
   font-size: 64px;
   font-style: normal;
@@ -217,40 +227,15 @@ header {
   text-align: left;
 }
 
-.modal header img {
+
+.modal-header-closebtn {
   cursor: pointer;
+  margin-top: 1rem;
 }
 
-.modal header h2 {
-  font-family: "DM Sans", sans-serif;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 83px;
-  letter-spacing: 0em;
-  margin: 0;
-  text-align: left;
-}
 
-.modal header p {
-  font-family: "DM Sans", sans-serif;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 83px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-form {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-form div {
-  margin-bottom: 26px;
+.form_contact_inputs {
+  margin-bottom: 1rem;
 }
 
 form label {
@@ -270,7 +255,22 @@ form input {
   border-radius: 5px;
   width: 599px;
   height: 68px;
+  padding-left: 0.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 47px;
+  letter-spacing: 0em;
+  text-align: left;
+  
 }
+
+#form_contact_message{
+  height: 170px;
+}
+
+
 
 /* ----------- slider ------------ */
 
