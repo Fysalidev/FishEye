@@ -24,6 +24,7 @@
   align-items: center;
   background-color: #fafafa;
   height: 300px;
+  width: 1350px;
 }
 
 .photograph-header-infos {
@@ -129,7 +130,7 @@
 .photograph-media {
   display: flex;
   flex-wrap: wrap;
-  gap: 7rem;
+  gap: 8rem;
 }
 
 .photograph-medium {
