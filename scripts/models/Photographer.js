@@ -54,9 +54,11 @@ class Photographer {
 
   }
 
-  buildPhotographerContactForm(){
+  addPhotographerNameOnContactForm(){
 
-    const $pageWrapper = document.getElementById('contact_modal')
+    const $pageWrapper = document.getElementById('modal-header-photographer-name')
+    $pageWrapper.innerHTML = this.name
+    
   }
 
 }

@@ -13,7 +13,7 @@
 
 <body>
   <div class="bloc-page">
-    <header aria-label="entête du site">
+    <header class="header-page" aria-label="entête du site">
       <a href="index.html">
         <img src="assets/images/logo.png" class="logo" alt="Logo Fisheye - Home page" />
       </a>
@@ -34,29 +34,37 @@
         </div>
       </section>
     </main>
-    <div id="contact_modal" role="dialog" aria-hidden="true">
-      <div class="modal">
+    <div id="contact_modal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
+      <div role="document">
         <header class="modal-header">
           <div class="modal-header-infos">
             <h2 class="modal-header-title">Contactez-moi</h2>
-            <span class="modal-header-photographer-name">Ellie-Rose Wilkens</span>
+            <span id="modal-header-photographer-name"></span>
           </div>
           <div class="modal-header-closebtn">
-            <img src="assets/icons/close.svg" id="modal-btn-close">
+            <img src="assets/icons/close.svg" id="modal-btn-close" tabindex="0">
           </div>
         </header>
         <form id="form_contact" aria-label="message">
           <div class="form_contact_inputs">
-            <label for="form_contact_firstname">Prénom</label>
-            <input type="text" name="form_contact_firstname" id="form_contact_firstname" placeholder="Prénom">
-            <label for="form_contact_lastname">Prénom</label>
-            <input type="text" name="form_contact_lastname" id="form_contact_lastname" placeholder="Nom">
-            <label for="form_contact_email">Email</label>
-            <input type="email" name="form_contact_email" id="form_contact_email" placeholder="mail">
-            <label for="form_contact_message">Message</label>
-            <input type="textarea" name="form_contact_message" id="form_contact_message">
+            <p>
+              <label for="form_contact_firstname">Prénom</label>
+              <input type="text" name="form_contact_firstname" id="form_contact_firstname" placeholder="Prénom">
+            </p>
+            <p>
+              <label for="form_contact_lastname">Prénom</label>
+              <input type="text" name="form_contact_lastname" id="form_contact_lastname" placeholder="Nom">
+            </p>
+            <p>
+              <label for="form_contact_email">Email</label>
+              <input type="email" name="form_contact_email" id="form_contact_email" placeholder="Mail">
+            </p>
+            <p>
+              <label for="form_contact_message">Message</label>
+              <input type="text" name="form_contact_message" id="form_contact_message">
+            </p>
           </div>
-          <button id="form_contact_btn-submit" class="contact_button">Envoyer</button>
+          <button type="submit" id="form_contact_btn-submit" class="contact_button">Envoyer</button>
         </form>
       </div>
     </div>

@@ -25,7 +25,6 @@ const closeSlider = () => {
   document.querySelector('.widget').classList.toggle('hidden')
 };
 
-
 // Select position before opening Slider
 const selectStartPosition = (node) => {
   const attribut = node.getAttribute("src");
