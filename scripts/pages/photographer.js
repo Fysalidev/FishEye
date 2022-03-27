@@ -56,12 +56,15 @@ const init = async () => {
   });
 
   submitBtn.addEventListener("click", (e) => {
-    // Valider le formulaire
+    e.preventDefault()
+    new Message
+    closeModal()
   })
 
   submitBtn.addEventListener('keydown', (e) => {
     if (e.target === document.activeElement && e.key === "Enter") {
-      // Valider le formualaire
+      new Message
+      closeModal()
     }
   })
   

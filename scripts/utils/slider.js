@@ -36,7 +36,6 @@ const selectStartPosition = (node) => {
 };
 
 // Navigate on Slider
-
 const nextSlide = () => {
   const slide = document.querySelector(".visible");
   slide.classList.replace("visible", "hidden");
@@ -56,7 +55,7 @@ const previousSlide = () => {
 // Event - Opening Slider
 
 const displaySlider = () => {
-  const sliderMediaNodes = document.querySelectorAll(".medium-container img");
+  const sliderMediaNodes = document.querySelectorAll(".medium-container");
 
   sliderMediaNodes.forEach((node) => {
     node.addEventListener("click", (event) => {
