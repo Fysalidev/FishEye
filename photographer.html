@@ -1,104 +1,165 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/photographer.css">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/2d00da5fd1.js" crossorigin="anonymous"></script>
-  <title>Fisheye photographes</title>
-</head>
-
-<body>
-  <div class="bloc-page">
-    <header class="header-page" aria-label="entête du site">
-      <a href="index.html">
-        <img src="assets/images/logo.png" class="logo" alt="Logo Fisheye - Home page" />
-      </a>
-    </header>
-    <main id="main" aria-label="media du photographe" aria-hidden="false">
-      <header id="modal-btn-open" class="photograph-header" aria-label="Entête du photographe"></header>
-      <section aria-label="media du photographe">
-        <div class="sorter-form-wrapper" aria-label="media selection"></div>
-        <div class="photograph-media" aria-label="media"></div>
-        <div class="widget" aria-label="media-widget">
-          <div class="widget_heart">
-            <span class="heart-count">14</span>
-            <i class="fa-solid fa-heart"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/photographer.css" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2d00da5fd1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Fisheye photographes</title>
+  </head>
+  <body>
+    <div class="bloc-page">
+      <header class="header-page" aria-label="entête du site">
+        <a href="index.html">
+          <img
+            src="assets/images/logo.png"
+            class="logo"
+            alt="Logo Fisheye - Home page"
+          />
+        </a>
+      </header>
+      <main id="main" aria-label="media du photographe" aria-hidden="false">
+        <header
+          id="modal-btn-open"
+          class="photograph-header"
+          aria-label="Entête du photographe"
+        ></header>
+        <section aria-label="media du photographe">
+          <div class="sorter-form-wrapper" aria-label="media selection"></div>
+          <div class="photograph-media" aria-label="media"></div>
+          <div class="widget" aria-label="media-widget">
+            <div class="widget_heart">
+              <span class="heart-count">14</span>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="widget_price"><span>130€</span><span>/jours</span></div>
           </div>
-          <div class="widget_price">
-            <span>130€</span><span>/jours</span>
+        </section>
+      </main>
+      <div
+        id="contact_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        tabindex="-1"
+        class="modal"
+      >
+        <div role="document">
+          <header class="modal-header">
+            <div class="modal-header-infos">
+              <h2 class="modal-header-title">Contactez-moi</h2>
+              <span id="modal-header-photographer-name"></span>
+            </div>
+            <div class="modal-header-closebtn">
+              <img
+                src="assets/icons/close.svg"
+                id="modal-btn-close"
+                tabindex="0"
+              />
+            </div>
+          </header>
+          <form id="form_contact" aria-label="message">
+            <div class="form_contact_inputs">
+              <p>
+                <label for="form_contact_firstname">Prénom</label>
+                <input
+                  type="text"
+                  name="form_contact_firstname"
+                  id="form_contact_firstname"
+                  placeholder="Prénom"
+                />
+              </p>
+              <p>
+                <label for="form_contact_lastname">Prénom</label>
+                <input
+                  type="text"
+                  name="form_contact_lastname"
+                  id="form_contact_lastname"
+                  placeholder="Nom"
+                />
+              </p>
+              <p>
+                <label for="form_contact_email">Email</label>
+                <input
+                  type="email"
+                  name="form_contact_email"
+                  id="form_contact_email"
+                  placeholder="Mail"
+                />
+              </p>
+              <p>
+                <label for="form_contact_message">Message</label>
+                <input
+                  type="text"
+                  name="form_contact_message"
+                  id="form_contact_message"
+                />
+              </p>
+            </div>
+            <button
+              type="submit"
+              id="form_contact_btn-submit"
+              class="contact_button"
+            >
+              Envoyer
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        id="slider"
+        role="slider"
+        class="slider hidden"
+        aria-label="slider"
+        aria-hidden="true"
+      >
+        <div role="document" class="slider-container">
+          <i
+            class="fa-solid fa-chevron-left slider_btn slider_btn-left"
+            aria-lebellby="slider"
+            tabindex="0"
+          ></i>
+          <div class="slider-media"></div>
+          <div class="slider-controls">
+            <i
+              class="fa-solid fa-chevron-right slider_btn slider_btn-right"
+              aria-lebellby="slider"
+              tabindex="0"
+            ></i>
+            <i
+              class="fa-solid fa-xmark slider_btn slider_btn-close"
+              aria-lebellby="slider"
+              tabindex="0"
+            ></i>
           </div>
         </div>
-      </section>
-    </main>
-    <div id="contact_modal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
-      <div role="document">
-        <header class="modal-header">
-          <div class="modal-header-infos">
-            <h2 class="modal-header-title">Contactez-moi</h2>
-            <span id="modal-header-photographer-name"></span>
-          </div>
-          <div class="modal-header-closebtn">
-            <img src="assets/icons/close.svg" id="modal-btn-close" tabindex="0">
-          </div>
-        </header>
-        <form id="form_contact" aria-label="message">
-          <div class="form_contact_inputs">
-            <p>
-              <label for="form_contact_firstname">Prénom</label>
-              <input type="text" name="form_contact_firstname" id="form_contact_firstname" placeholder="Prénom">
-            </p>
-            <p>
-              <label for="form_contact_lastname">Prénom</label>
-              <input type="text" name="form_contact_lastname" id="form_contact_lastname" placeholder="Nom">
-            </p>
-            <p>
-              <label for="form_contact_email">Email</label>
-              <input type="email" name="form_contact_email" id="form_contact_email" placeholder="Mail">
-            </p>
-            <p>
-              <label for="form_contact_message">Message</label>
-              <input type="text" name="form_contact_message" id="form_contact_message">
-            </p>
-          </div>
-          <button type="submit" id="form_contact_btn-submit" class="contact_button">Envoyer</button>
-        </form>
       </div>
     </div>
-    <div id="slider" role="slider" class="slider hidden" aria-label="slider" aria-hidden="true">
-      <div role="document" class="slider-container">
-        <i class="fa-solid fa-chevron-left slider_btn slider_btn-left" aria-lebellby="slider" tabindex="0"></i>
-        <div class="slider-media">
-        </div>
-        <div class="slider-controls">
-          <i class="fa-solid fa-chevron-right slider_btn slider_btn-right" aria-lebellby="slider" tabindex="0"></i>
-          <i class="fa-solid fa-xmark slider_btn slider_btn-close" aria-lebellby="slider" tabindex="0"></i>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- api -->
-  <script src="scripts/api/api.js"></script>
-  <!-- Utils -->
-  <script src="scripts/utils/contactForm.js"></script>
-  <script src="scripts/utils/slider.js"></script>
-  <script src="scripts/utils/likesManager.js"></script>
-  <!-- Factories -->
-  <script src="scripts/factories/MediaFactory.js"></script>
-  <!-- models -->
-  <script src="scripts/models/Photographer.js"></script>
-  <script src="scripts/models/Image.js"></script>
-  <script src="scripts/models/Video.js"></script>
-  <!-- template -->
-  <script src="scripts/templates/SorterMedia.js"></script>
-  <!-- pages -->
-  <script src="scripts/pages/photographer.js"></script>
-
-
-</body>
-
+    <!-- api -->
+    <script src="scripts/api/api.js"></script>
+    <!-- Utils -->
+    <script src="scripts/utils/contactForm.js"></script>
+    <script src="scripts/utils/slider.js"></script>
+    <script src="scripts/utils/likesManager.js"></script>
+    <!-- Factories -->
+    <script src="scripts/factories/MediaFactory.js"></script>
+    <!-- models -->
+    <script src="scripts/models/Photographer.js"></script>
+    <script src="scripts/models/Image.js"></script>
+    <script src="scripts/models/Video.js"></script>
+    <!-- template -->
+    <script src="scripts/templates/SorterMedia.js"></script>
+    <!-- pages -->
+    <script src="scripts/pages/photographer.js"></script>
+  </body>
 </html>
