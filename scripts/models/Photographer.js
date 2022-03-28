@@ -16,8 +16,8 @@ class Photographer {
 
     const html = `
       <a href="photographer.html?id=${this.id}">
-      <div class="photographer-link" alt="${this.name}">
-        <img src="assets/photographers/${this.portrait}" alt="#">
+      <div class="photographer-link">
+        <img src="assets/photographers/${this.portrait}" alt="${this.name}">
         <h2>${this.name}</h2>
       </div>
       </a>
@@ -26,7 +26,7 @@ class Photographer {
         <span class="tagline">${this.tagline}</span><br>
         <span class="price">${this.price}€/Jour</span><br>
       </p>
-    `
+    `;
 
     article.innerHTML = html;
     wrapper.appendChild(article);
