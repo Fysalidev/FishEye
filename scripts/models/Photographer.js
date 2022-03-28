@@ -43,7 +43,7 @@ class Photographer {
           <p class="location">${this.city}, ${this.country}</p>
           <p class="tagline">${this.tagline}</p>
         </div>
-        <button class="contact_button">Contactez-moi</button>
+        <button id="header-btn"class="contact_button">Contactez-moi</button>
         <div class="photograph-header-portrait">
           <img src="assets/photographers/${this.portrait}" alt="${this.name}">
         </div>

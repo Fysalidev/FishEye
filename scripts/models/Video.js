@@ -25,8 +25,11 @@ class Video {
 
     // Media
     const elementMedium = document.createElement("video");
-    elementMedium.setAttribute("src", `assets/media/${this.medium}`);
-    mediumContainer.appendChild(elementMedium);
+    elementMedium.setAttribute("src", `assets/media/${this.medium}`)
+    elementMedium.setAttribute("tabindex", "0");
+    elementMedium.setAttribute("aria-label", "medium")
+    elementMedium.setAttribute("alt", `${this.title}`)
+    mediumContainer.appendChild(elementMedium)
 
     //Titre
     const titleCard = document.createElement("h3");
@@ -41,6 +44,7 @@ class Video {
     elementLikesCount.textContent = this.likes;
     const elementLikesBtn = document.createElement("i");
     elementLikesBtn.classList.add("fa-solid", "fa-heart", "heart-btn");
+    elementLikesBtn.setAttribute("tabindex", "0");
     elementLikes.appendChild(elementLikesCount);
     elementLikes.appendChild(elementLikesBtn);
     infosContainer.appendChild(elementLikes);
@@ -54,7 +58,7 @@ class Video {
     slide.classList.add('slide', 'hidden');
     
     const html = `
-      <video controls class="slide-medium" src="assets/media/${this.medium}"><p>Votre navigateur ne supporte pas les vidéo HTML5 utilisez ce lien pour visionner la vidéoYour browser doesn't support HTML5 video : 
+      <video controls class="slide-medium" src="assets/media/${this.medium}" alt=${this.title}><p>Votre navigateur ne supporte pas les vidéo HTML5 utilisez ce lien pour visionner la vidéoYour browser doesn't support HTML5 video : 
       <a href="assets/media/${this.medium}">Vidéo</a> instead.</p></video>
       <p class="title">${this.title}</p>
     `;

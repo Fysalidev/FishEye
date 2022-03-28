@@ -18,7 +18,7 @@ const init = async () => {
 
   // Event Modal Btn
   const modal = document.getElementById('contact_modal')
-  const contactBtn = document.getElementById("modal-btn-open");
+  const contactBtn = document.getElementById('header-btn');
   const modalCloseBtn = document.getElementById('modal-btn-close')
   const submitBtn = document.getElementById("form_contact_btn-submit");
   

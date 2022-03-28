@@ -28,6 +28,7 @@ class Image {
     elementMedium.setAttribute("src", `assets/media/${this.medium}`)
     elementMedium.setAttribute('tabindex','0')
     elementMedium.setAttribute('aria-label', 'medium')
+    elementMedium.setAttribute('alt', `${this.title}`)
     mediumContainer.appendChild(elementMedium)
 
     //Titre
@@ -57,7 +58,7 @@ class Image {
     slide.classList.add('slide', 'hidden')
     
     const html = `
-      <img class="slide-medium" src="assets/media/${this.medium}">
+      <img class="slide-medium" src="assets/media/${this.medium}" alt=${this.title}>
       <p class="title">${this.title}</p>
     `;
 
