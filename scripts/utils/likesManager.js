@@ -37,7 +37,6 @@ function heartManager() {
         let numberOfLikes = parseInt(
           e.target.previousElementSibling.textContent
         );
-        console.log(numberOfLikes);
 
         isBtnOnclick ? numberOfLikes++ : numberOfLikes--;
         e.target.previousElementSibling.textContent = numberOfLikes;

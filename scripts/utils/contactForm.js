@@ -7,7 +7,7 @@ function displayModal() {
     modal.setAttribute("aria-modal", "true");
     modal.focus()
     
-    main.setAttribute("aria-hidden", 'false');
+    main.setAttribute("aria-hidden", 'true');
     
 }
 
@@ -19,6 +19,7 @@ function closeModal() {
     form.reset()
     modal.style.display = "none";
     modal.setAttribute("aria-hidden", 'true');
+    modal.setAttribute("aria-modal", "false");
     main.setAttribute("aria-hidden", 'false');
 }
 

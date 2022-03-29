@@ -15,6 +15,7 @@ const init = async () => {
   const Template = new Photographer(photographerData);
   Template.buildPhotographerHeader()
   Template.addPhotographerNameOnContactForm()
+  Template.addPriceOnWidget()
 
   // Event Modal Btn
   const modal = document.getElementById('contact_modal')

@@ -11,14 +11,13 @@ class Photographer {
 
   buildPhotographerCard() {
 
-    const wrapper = document.querySelector(".photographer_section")
-    const article = document.createElement("article")
-    article.setAttribute('aria-label', `Carte du photographe ${this.name}`)
+    const wrapper = document.querySelector(".photographer_section");
+    const article = document.createElement("article");
 
     const html = `
       <a href="photographer.html?id=${this.id}">
       <div class="photographer-link">
-        <img src="assets/photographers/${this.portrait}" alt="Photo portrait">
+        <img src="assets/photographers/${this.portrait}" alt="${this.name}">
         <h2>${this.name}</h2>
       </div>
       </a>
@@ -46,7 +45,7 @@ class Photographer {
         </div>
         <button id="header-btn"class="contact_button">Contactez-moi</button>
         <div class="photograph-header-portrait">
-          <img src="assets/photographers/${this.portrait}" alt="${this.name}">
+          <img src="assets/photographers/${this.portrait}" alt="portrait ${this.name}">
         </div>
       </article>
     `;
@@ -59,6 +58,13 @@ class Photographer {
 
     const $pageWrapper = document.getElementById('modal-header-photographer-name')
     $pageWrapper.innerHTML = this.name
+    
+  }
+
+  addPriceOnWidget(){
+
+  const $pageWrapper = document.getElementById('widget-price')
+  $pageWrapper.innerHTML = this.price  
     
   }
 

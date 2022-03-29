@@ -11,17 +11,18 @@ class Video {
   }
 
   creatHtml() {
-    const card = document.createElement("article");
+    const card = document.createElement("article")
+    card.setAttribute("aria-label", "carte Media")
 
-    const mediumContainer = document.createElement("div");
-    mediumContainer.classList.add("medium-container");
+    const mediumContainer = document.createElement("div")
+    mediumContainer.classList.add("medium-container")
 
-    const infosContainer = document.createElement("div");
-    infosContainer.classList.add("infos-container");
+    const infosContainer = document.createElement("div")
+    infosContainer.classList.add("infos-container")
 
-    card.classList.add("photograph-medium");
-    card.appendChild(mediumContainer);
-    card.appendChild(infosContainer);
+    card.classList.add("photograph-medium")
+    card.appendChild(mediumContainer)
+    card.appendChild(infosContainer)
 
     // Media
     const elementMedium = document.createElement("video");
@@ -37,17 +38,19 @@ class Video {
     infosContainer.appendChild(titleCard);
 
     //Likes
-    const elementLikes = document.createElement("div");
-    elementLikes.classList.add("likes");
-    const elementLikesCount = document.createElement("span");
-    elementLikesCount.classList.add("likesCount");
+    const elementLikes = document.createElement("div")
+    elementLikes.classList.add("likes")
+    const elementLikesCount = document.createElement("span")
+    elementLikesCount.classList.add("likesCount")
     elementLikesCount.textContent = this.likes;
-    const elementLikesBtn = document.createElement("i");
-    elementLikesBtn.classList.add("fa-solid", "fa-heart", "heart-btn");
-    elementLikesBtn.setAttribute("tabindex", "0");
-    elementLikes.appendChild(elementLikesCount);
-    elementLikes.appendChild(elementLikesBtn);
-    infosContainer.appendChild(elementLikes);
+    const elementLikesBtn = document.createElement("i")
+    elementLikesBtn.classList.add("fa-solid", "fa-heart", "heart-btn")
+    elementLikesBtn.setAttribute("tabindex", "0")
+    elementLikesBtn.setAttribute("aria-label", "like")
+    elementLikesBtn.setAttribute("role", "button")
+    elementLikes.appendChild(elementLikesCount)
+    elementLikes.appendChild(elementLikesBtn)
+    infosContainer.appendChild(elementLikes)
 
     return card;
   }

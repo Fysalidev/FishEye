@@ -12,6 +12,7 @@ class Image {
 
   creatHtml() {
     const card = document.createElement("article")
+    card.setAttribute('aria-label', 'carte Media')
 
     const mediumContainer = document.createElement("div")
     mediumContainer.classList.add("medium-container")
@@ -45,6 +46,8 @@ class Image {
     const elementLikesBtn = document.createElement('i')
     elementLikesBtn.classList.add('fa-solid', 'fa-heart', 'heart-btn')
     elementLikesBtn.setAttribute('tabindex', '0')
+    elementLikesBtn.setAttribute('aria-label', 'like')
+    elementLikesBtn.setAttribute("role", "button")
     elementLikes.appendChild(elementLikesCount)
     elementLikes.appendChild(elementLikesBtn)
     infosContainer.appendChild(elementLikes)
