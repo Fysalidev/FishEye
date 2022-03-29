@@ -20,38 +20,38 @@
       </a>
     </header>
     <main id="main" aria-hidden="false">
-      <header id="modal-btn-open" class="photograph-header" aria-label="Entête du photographe" role="banner"></header>
+      <header id="modal-btn-open" class="photograph-header" aria-label="Entête du photographe"></header>
       <section aria-label="media du photographe">
         <div class="sorter-form-wrapper" aria-label="Filtre media" role="search"></div>
         <div class="photograph-media"></div>
         <div class="widget">
           <div class="widget_heart">
-            <span class="heart-count">14</span>
+            <span class="heart-count"></span>
             <i class="fa-solid fa-heart"></i>
           </div>
           <div class="widget_price"><span id="widget-price"></span><span>/jours</span></div>
         </div>
       </section>
     </main>
-    <div id="contact_modal" role="dialog" arial-label="formulaire de contact"aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
-      <div role="document">
+    <div id="contact_modal" role="dialog" aria-label="formulaire de contact" aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
+      <div>
         <header class="modal-header">
           <div class="modal-header-infos">
             <h2 class="modal-header-title">Contactez-moi</h2>
             <span id="modal-header-photographer-name"></span>
           </div>
-          <div class="modal-header-closebtn" arial-label="close button" aria-label="button"> 
-            <img src="assets/icons/close.svg" alt="icone closebtn" id="modal-btn-close" tabindex="0" />
+          <div class="modal-header-closebtn"> 
+            <img src="assets/icons/close.svg" alt="icone closebtn" id="modal-btn-close" tabindex="0" role="button"/>
           </div>
         </header>
-        <form id="form_contact" aria-label="message">
+        <form id="form_contact" aria-label="formulaire">
           <div class="form_contact_inputs">
             <p>
               <label for="form_contact_firstname">Prénom</label>
               <input type="text" name="form_contact_firstname" id="form_contact_firstname" placeholder="Prénom" />
             </p>
             <p>
-              <label for="form_contact_lastname">Prénom</label>
+              <label for="form_contact_lastname">Nom</label>
               <input type="text" name="form_contact_lastname" id="form_contact_lastname" placeholder="Nom" />
             </p>
             <p>
@@ -71,12 +71,11 @@
     </div>
     <div id="slider" class="slider hidden" aria-hidden="true">
       <div role="document" class="slider-container">
-
-        <i class="fa-solid fa-chevron-left slider_btn slider_btn-left" tabindex="0"></i>
+        <i class="fa-solid fa-chevron-left slider_btn slider_btn-left" tabindex="0" role="button"></i>
         <div class="slider-media"></div>
         <div class="slider-controls">
-          <i class="fa-solid fa-chevron-right slider_btn slider_btn-right" tabindex="0"></i>
-          <i class="fa-solid fa-xmark slider_btn slider_btn-close" tabindex="0"></i>
+          <i class="fa-solid fa-chevron-right slider_btn slider_btn-right" tabindex="0" role="button"></i>
+          <i class="fa-solid fa-xmark slider_btn slider_btn-close" tabindex="0" role="button"></i>
         </div>
       </div>
     </div>
